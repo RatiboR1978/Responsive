@@ -1,6 +1,7 @@
 .page-header {
   background: url("../img/bg-320.jpg") no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .page-header__wrapper {
@@ -43,12 +44,12 @@
   }
 }
 
-.main-nav__item--active {
+.page-header__nav-item1--active {
   display: block;
   position: relative;
 }
 
-.main-nav__item--active:before {
+.page-header__nav-item1--active:before {
   position: absolute;
   content: '';
   width: 40px;
@@ -58,9 +59,14 @@
   left: 140px;
 }
 
+.page-header__slider {
+  padding-bottom: 68px;
+}
+
 .page-header__container-slider {
   max-width: 320px;
   margin: 0 auto;
+  position: relative;
 }
 
 .page-header__slide {
@@ -81,6 +87,45 @@
 
 #btn-1,
 #btn-2,
-#btn-3 {
+#btn-3,
+#btn-4 {
   display: none;
+}
+
+.page-header__arrow-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-header__arrow-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.page-header__slider-controls {
+  margin: 80px auto 0;
+  width: 85px;
+}
+
+.page-header__slider-controls label {
+  display: inline-block;
+  vertical-align: middle;
+  background: #000;
+  width: 14px;
+  height: 14px;
+  border: 2px solid black;
+  border-radius: 50%;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+#btn-1:checked~.page-header__slider-controls label[for=btn-1],
+#btn-2:checked~.page-header__slider-controls label[for=btn-2],
+#btn-3:checked~.page-header__slider-controls label[for=btn-3],
+#btn-4:checked~.page-header__slider-controls label[for=btn-4] {
+  background: white;
+  opacity: 0.3;
+  border: 2px solid black;
 }

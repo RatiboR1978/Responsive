@@ -374,11 +374,11 @@ textarea {
 
 @font-face {
   font-family: 'osxbold';
-  src: url("../fonts/opensansextrabold.woff2") format("woff2"), url("fonts/opensansextrabold.woff") format("woff"); }
+  src: url("../fonts/opensansextrabold.woff2") format("woff2"), url("../fonts/opensansextrabold.woff") format("woff"); }
 
 @font-face {
   font-family: 'oslight';
-  src: url("../fonts/opensanslight.woff2") format("woff2"), url("fonts/opensanslight.woff") format("woff"); }
+  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff"); }
 
 body {
   position: relative;
@@ -411,7 +411,8 @@ img {
 
 .page-header {
   background: url("../img/bg-320.jpg") no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
 
 .page-header__wrapper {
   max-width: 320px;
@@ -446,11 +447,11 @@ img {
     font-size: 24px;
     font-family: 'lgothic', sans-serif; }
 
-.main-nav__item--active {
+.page-header__nav-item1--active {
   display: block;
   position: relative; }
 
-.main-nav__item--active:before {
+.page-header__nav-item1--active:before {
   position: absolute;
   content: '';
   width: 40px;
@@ -459,9 +460,13 @@ img {
   top: 32px;
   left: 140px; }
 
+.page-header__slider {
+  padding-bottom: 68px; }
+
 .page-header__container-slider {
   max-width: 320px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 .page-header__slide {
   padding: 0 55px; }
@@ -478,5 +483,43 @@ img {
 
 #btn-1,
 #btn-2,
-#btn-3 {
+#btn-3,
+#btn-4 {
   display: none; }
+
+.page-header__arrow-prev {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.page-header__arrow-next {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.page-header__slider-controls {
+  margin: 80px auto 0;
+  width: 85px; }
+
+.page-header__slider-controls label {
+  display: inline-block;
+  vertical-align: middle;
+  background: #000;
+  width: 14px;
+  height: 14px;
+  border: 2px solid black;
+  border-radius: 50%;
+  opacity: 0.3;
+  cursor: pointer; }
+
+#btn-1:checked ~ .page-header__slider-controls label[for=btn-1],
+#btn-2:checked ~ .page-header__slider-controls label[for=btn-2],
+#btn-3:checked ~ .page-header__slider-controls label[for=btn-3],
+#btn-4:checked ~ .page-header__slider-controls label[for=btn-4] {
+  background: white;
+  opacity: 0.3;
+  border: 2px solid black; }
+
+.about-company {
+  background: linear-gradient(to top, #765284, #36293d);
+  border-top: 2px solid #35273c; }
